@@ -1,0 +1,123 @@
+﻿<%--<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="SeleniumWebApp.master.cs" Inherits="JS_Grid.SeleniumWebApp" %>--%>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+
+    <title></title>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <%--<meta http-equiv="refresh" content="2">--%>
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="~/css/demos.css" />
+    <link rel="stylesheet" type="text/css" href="~/css/jsgrid.min.css" />
+    <link rel="stylesheet" type="text/css" href="~/css/custom.css" />
+    <link href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" rel="stylesheet">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!--<Navigation menu>-->
+    <link href="CSS/animate.min.css" rel="stylesheet" />
+    <link href="CSS/bootstrap-dropdownhover.min.css" rel="stylesheet" />
+    <script src="JS/bootstrap-dropdownhover.min.js"></script>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <style>
+        .dropdown-menu {
+            background-color: #1264ab;
+        }
+
+        .btnSideNav {
+            float: left;
+            display: inline-block;
+            position: relative;
+            margin-top: 20px;
+            margin-right: 10px;
+            border: none;
+            background-color:white;
+        }
+
+        .collapsedNavbar-content {
+            margin-top: 60px;
+        }
+    </style>
+</head>
+<body>
+    <form runat="server">
+        <div class="mainContainer">
+            <nav class="navbar" style="margin-bottom: 0px;">
+                <div class="form-inline my-2 my-lg-0" runat="server">
+                    <div class="dropdown">
+                        <button class="btnSideNav dropdown-toggle" type="button" data-toggle="dropdown" data-hover="dropdown">
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                        </button>
+                        <div class="collapsedNavbar-content dropdown-menu">
+                            <ul>
+                                <li><a href="SeleniumDashboard.aspx" class="dropdown-item">SELENIUM DASHBOARD</a></li>
+                                <li><a href="Information.aspx" class="dropdown-item">INFORMATION DASHBOARD</a></li>
+                                <li><a href="History.aspx" class="dropdown-item">TEST RESULT HISTORY</a></li>
+                              <%--  <li><a href="ConfigurationHome.aspx" class="dropdown-item">CONFIGURATION PORTAL</a></li>
+                                <li class="dropdown">
+                                    <a href="#">USER CONFIGURATION</a>
+                                    <div class="collapsedNavbar-content dropdown-menu">
+                                        <ul>
+                                            <li><a href="CreateRole.aspx">CREATE ROLE</a></li>
+                                            <li><a href="CreateUser.aspx">CREATE USER</a></li>
+                                        </ul>
+                                    </div>
+                                </li>--%>
+                                <li><a href="mailto:Automation.Team@cammsgroup.com" class="dropdown-item">SUPPORT</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <asp:ContentPlaceHolder ID="pageTitle" runat="server">
+                    </asp:ContentPlaceHolder>
+
+                    <div id="rightNavbar" class="navbar-right navbar-brand " runat="server">
+
+
+                        <p>User : </p>
+                        <%--<i class="fa fa-user fa-fw"></i>--%>
+                        <asp:DropDownList ID="ddlUserName" class="dropdown-toggle btn-primary form-control  navbar-btn" runat="server" OnSelectedIndexChanged="ddlUserName_SelectedIndexChanged" AppendDataBoundItems="False" AutoPostBack="true">
+                            <asp:ListItem Value="">Select</asp:ListItem>
+                        </asp:DropDownList>
+                        <asp:Button ID="btnGetUsers" class="btn btn-primary navbar-btn" runat="server" Text="Get Current Users" />
+                    </div>
+
+                    <div id="dropdowns" class="navbar-right navbar-brand " runat="server">
+                        <p>Scenario : </p>
+                        <%--<i class="fa fa-user fa-fw"></i>--%>
+                        <asp:DropDownList ID="ddlScenario" class="dropdown-toggle btn-primary form-control  navbar-btn" runat="server" AppendDataBoundItems="False" AutoPostBack="true" OnSelectedIndexChanged="ddlScenario_SelectedIndexChanged">
+                        </asp:DropDownList>
+
+                        <p id="lblExecutedTime">Executed Time : </p>
+                        <asp:DropDownList ID="ddlExecutedTime" class="dropdown-toggle btn-primary form-control  navbar-btn" runat="server" AppendDataBoundItems="False" OnSelectedIndexChanged="ddlExecutedTime_SelectedIndexChanged" AutoPostBack="true">
+                        </asp:DropDownList>
+
+                    </div>
+                </div>
+
+            </nav>
+
+        </div>
+
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+
+    </form>
+
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+    <script src="./js/jquery.validate.min.js"></script>
+    <script src="./js/jsgrid.min.js"></script>
+
+</body>
+</html>

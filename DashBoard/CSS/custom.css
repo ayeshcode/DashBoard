@@ -1,0 +1,466 @@
+﻿
+body {
+    font-family: "Roboto";
+    font-size: 14px;
+    background-color: #cee6ff;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 2;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+img {
+    width: inherit;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+blockquote, q {
+    quotes: none;
+}
+
+    blockquote:before, blockquote:after,
+    q:before, q:after {
+        content: '';
+        content: none;
+    }
+
+#errorScreenshot {
+    display: block;
+    margin: auto;
+    color: red;
+    text-align: center;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.jsgrid {
+    margin: 0 20px;
+    display: block;
+    width: auto !important;
+    height: 200px;
+    border-bottom: solid 2px #eeeeee;
+    border-left: solid 2px #eeeeee;
+    border-right: solid 2px #eeeeee;
+}
+
+.mainContainer {
+    margin: 0 20px;
+}
+
+.jsgrid-filter-row > .jsgrid-cell:first-child, .jsgrid-header-row > .jsgrid-header-cell:first-child, .jsgrid-insert-row > .jsgrid-cell:first-child, .jsgrid-header-row > .jsgrid-header-cell {
+    height: 40px;
+    background: #d5d5d5;
+    font-weight: bold !important;
+    color: #21415b;
+    Border: 0 !important;
+    padding: 5px 0 0 5px !important;
+    vertical-align: top;
+    text-align: left;
+}
+
+.jsgrid-row > .jsgrid-cell, .jsgrid-alt-row > .jsgrid-cell {
+    border-width: 0 0 2px 0 !important;
+    border-bottom: solid 2px #eeeeee;
+    text-align: left;
+    height: 10px !important;
+}
+
+    .jsgrid-row > .jsgrid-cell:first-child, .jsgrid-alt-row > .jsgrid-cell:first-child {
+        border-left: none;
+    }
+
+.jsgrid-grid-body[style] {
+    height: 100% !important;
+}
+
+.mainContainer h2 {
+    border-bottom: none;
+    font-size: 24px;
+    padding: 10px 0;
+    color: #1264ab;
+    font-weight: 600;
+    text-shadow: 20px;
+}
+
+#scenarioProgress {
+    position: relative;
+    width: 100%;
+    height: 17px;
+    border-radius: 40px;
+}
+
+
+
+#scenarioProgressBar {
+    width: 0%;
+    height: 100%;
+    animation: progress-bar-stripes 0.5s linear infinite;
+    text-align: center;
+    font-size: 12px;
+    padding-top: 0;
+}
+
+p {
+    font-size: 14px;
+    display: inline-block;
+    font-weight: bold;
+    color: #21415b;
+}
+
+
+#lblProgress {
+    font-size: 14px;
+    display: inline-block;
+    font-weight: bold;
+    margin-bottom: 100px;
+    margin-top: 0px;
+}
+
+#scenarioProgressDetails {
+    height: 54px;
+}
+
+
+.ui-jqgrid-bdiv {
+    overflow-x: hidden !important;
+}
+
+#pieChart, #pieChartByProduct, #pieChartBySeverity {
+    height: 250px;
+    width: 430px;
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,.16), 0 1px 5px 0 rgba(0,0,0,.16);
+    border-radius: 10px;
+    padding-top: 30px;
+    position: relative;
+    z-index: 1;
+}
+
+.collapsedNavbar {
+    position: relative;
+    display: inline-block;
+    margin-top: 20px;
+    margin-right: 10px;
+    float: left;
+    border:none;
+    
+}
+.collapsedNavbar-content {
+    background-color: #1264ab;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    border-radius: 5px;
+}
+
+    .collapsedNavbar-content a {
+        color: #eeeeee;
+        padding: 12px 16px;
+        text-decoration: none;
+        font-weight: bold;
+        display: block;
+    }
+
+        .collapsedNavbar-content a:hover {
+            background-color: #05174f;
+            color: #eeeeee;
+            text-decoration: none;
+            border-radius: 0px;
+        }
+
+.collapsedNavbar:hover .collapsedNavbar-content {
+    display: block;
+}
+
+.collapsedNavbar:hover .bar {
+    background-color: #120c9c;
+}
+
+.bar {
+    width: 35px;
+    height: 5px;
+    background-color: #1264ab;
+    margin: 5px 0;
+    transition: 0.4s;
+}
+
+
+.roundIcon1 {
+    background-image: linear-gradient(to right,#9f78ff,#32cafe);
+}
+
+.roundIcon2 {
+    background-image: linear-gradient(to right,#00819c,#2cff13);
+}
+
+.roundIcon3 {
+    background-image: linear-gradient(to right,#a376fc,#f96f9b);
+}
+
+.roundIcon4 {
+    background-image: linear-gradient(to right,#e24141,#f1bd0c);
+}
+
+.row {
+    display: block;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.rowCharts {
+    margin-top: 40px;
+}
+
+.card-body i {
+    font-size: 30px;
+    margin-top: -20px;
+    text-align: center;
+    height: 50px;
+    width: 50px;
+    padding-top: 10px;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.16);
+}
+
+.icon {
+    font-size: 20px;
+    text-align: center;
+    background-image: none;
+    height: auto;
+    width: auto;
+    padding-top: 0;
+    background-color: none;
+}
+
+.box-part {
+    max-height: 100px;
+}
+
+.title {
+    margin-top: 1px;
+}
+
+.statNumber {
+    font-size: 20px;
+    color: #120c9c;
+    font-weight: 600;
+}
+
+.cardContent {
+    display: inline;
+}
+
+#userListCard, #scenarioListCard {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+#titleProduct, #titleSeverity {
+    padding-top: 30px;
+    padding-bottom: 32px;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 70px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 85%;
+    align-content: center;
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+    .close:hover,
+    .close:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+#screenshotPopup {
+    text-align: center;
+}
+
+/*************************************************************************/
+.tile {
+    border-radius: 10px;
+    color: black;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.16);
+    text-align: center;
+}
+
+    .tile:hover {
+        transform: scale(1.01);
+    }
+
+.innercard {
+    overflow: hidden;
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+@keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+/*log in page*/
+
+
+.login {
+    margin: auto;
+    margin-top: 6%;
+    width: 35%;
+    padding: 40px;
+    text-align: center;
+    background-color: white;
+}
+
+.loginPage {
+    background-color: #cee6ff;
+    background-image: linear-gradient(to right, lightblue, #00478E);
+}
+
+
+/*Forms*/
+
+.configNav {
+    background-color: #21415A;
+    z-index: 1;
+}
+
+.configTitle {
+    color: white;
+    font-size: 26px;
+}
+
+.formTitle {
+    font-weight: 600;
+}
+
+hr {
+    border-top: 1px solid;
+}
+
+.formContainer {
+    max-width: 60%;
+    margin: 50px 300px;
+    background-color: white;
+    border-radius: 5px;
+    padding:10px 10px 10px 10px;
+}
+
+.sidenav {
+    height: 100%;
+    width: 100px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #1264ab;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+    .sidenav a {
+        padding: 6px 8px 6px 16px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #818181;
+        display: block;
+    }
+
+.dropdown-menu {
+    background-color: #1264ab;
+}
+
+.btnSideNav {
+    float: left;
+    display: inline-block;
+    position: relative;
+    margin-top: 20px;
+    margin-right: 10px;
+    border: none;
+    background-color: white;
+}
+
+.collapsedNavbar-content {
+    margin-top: 60px;
+}
